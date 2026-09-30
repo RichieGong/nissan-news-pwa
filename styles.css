@@ -1,0 +1,172 @@
+:root {
+  --bg: #131722;         /* TradingView-style dark */
+  --panel: #1c2230;
+  --card: #1e2634;
+  --border: #2a3242;
+  --text: #d1d4dc;
+  --muted: #787b86;
+  --accent: #2962ff;
+  --tariffs: #e07b39;
+  --parts: #2eb9a6;
+  --trade: #b39ddb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+}
+
+header {
+  padding: 24px 0 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 { font-size: 22px; font-weight: 700; }
+
+.badge {
+  background: #4a3a00;
+  color: #ffd54f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.subtitle { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.chips { display: flex; gap: 8px; }
+
+.chip {
+  background: var(--panel);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.chip:hover { color: var(--text); }
+
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+#search {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 7px 12px;
+  font-size: 13px;
+  width: 220px;
+}
+
+#feed { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.card:hover { background: var(--panel); }
+
+.card .meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.card .tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tag-Tariffs { background: rgba(224, 123, 57, 0.15); color: var(--tariffs); }
+.tag-Parts   { background: rgba(46, 185, 166, 0.15); color: var(--parts); }
+.tag-Trade   { background: rgba(179, 157, 219, 0.15); color: var(--trade); }
+.tag-evtech  { background: rgba(82, 196, 253, 0.15); color: #52c4fd; }
+
+.card h3 { font-size: 15px; font-weight: 600; line-height: 1.35; }
+
+.card .summary {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.card.open .summary { display: block; }
+.card.open { border-left-color: var(--accent); }
+
+.read {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read:hover { text-decoration: underline; }
+
+.card .summary .note {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.empty { color: var(--muted); text-align: center; padding: 40px 0; }
+.hidden { display: none; }
+
+footer {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}

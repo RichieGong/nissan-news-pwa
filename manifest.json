@@ -1,0 +1,17 @@
+{
+  "name": "Nissan Trade News",
+  "short_name": "Nissan News",
+  "description": "Chronological news on car parts, tariffs, and intercontinental trade for Nissan.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#131722",
+  "theme_color": "#131722",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

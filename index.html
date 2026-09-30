@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nissan Trade News</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>Nissan Trade News</h1>
+      <span class="badge" id="badge">MOCK DATA</span>
+    </div>
+    <p class="subtitle">Parts · Tariffs · Intercontinental trade — in chronological order</p>
+  </header>
+
+  <div class="controls">
+    <div class="chips" id="chips">
+      <button class="chip active" data-tag="all">All</button>
+      <button class="chip" data-tag="Tariffs">Tariffs</button>
+      <button class="chip" data-tag="Parts">Parts</button>
+      <button class="chip" data-tag="Trade">Trade</button>
+      <button class="chip" data-tag="EV & Tech">EV & Tech</button>
+    </div>
+    <input type="search" id="search" placeholder="Search headlines...">
+  </div>
+
+  <main>
+    <p class="count" id="count"></p>
+    <ul id="feed"></ul>
+    <p id="empty" class="empty hidden">No stories match. Try another filter.</p>
+  </main>
+
+  <footer>
+    <span id="updated-at"></span>
+  </footer>
+
+  <script src="news.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
