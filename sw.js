@@ -1,6 +1,6 @@
 // Service worker — makes the app installable and works offline.
 // Bump CACHE to "nissan-news-v2" etc. when you want to force refresh everything.
-const CACHE = "nissan-news-v1";
+const CACHE = "nissan-news-v2";
 
 const ASSETS = [
   "./",

@@ -120,25 +120,19 @@ function render() {
     const li = document.createElement("li");
     li.className = "card";
     li.innerHTML = `
-      <div class="meta">
-        <span>${esc(formatTime(n.time))}</span>
-        <span>·</span>
-        <span>${esc(n.source)}</span>
-        <span class="tag tag-${slug(n.tag)}">${esc(n.tag)}</span>
-      </div>
-      <h3>${esc(n.title)}</h3>
-      <div class="summary">
-        <a class="read" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">
-          Read full article ↗
-        </a>
-        <span class="note">Headline and link only — the publisher may require a subscription.</span>
-      </div>
+      <a class="card-link" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">
+        <div class="meta">
+          <span>${esc(formatTime(n.time))}</span>
+          <span>·</span>
+          <span>${esc(n.source)}</span>
+          <span class="tag tag-${slug(n.tag)}">${esc(n.tag)}</span>
+        </div>
+        <h3>${esc(n.title)}</h3>
+        <div class="summary">
+          <span class="note">Opens the publisher's site — may require a subscription.</span>
+        </div>
+      </a>
     `;
-    // Clicking the card expands it, but clicking the link must still open it.
-    li.addEventListener("click", (e) => {
-      if (e.target.closest("a")) return;
-      li.classList.toggle("open");
-    });
     feed.appendChild(li);
   }
 
